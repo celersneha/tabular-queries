@@ -40,7 +40,7 @@ export async function getUsers({
       where: whereClause,
       skip: (page - 1) * limit,
       take: limit,
-      orderBy: { createdAt: "desc" },
+      orderBy: { name: "asc" },
     }),
     prisma.user.count({
       where: whereClause,

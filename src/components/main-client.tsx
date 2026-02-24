@@ -12,6 +12,7 @@ export default function ClientPage() {
     page,
     setPage,
     data,
+    setData,
     totalPages,
     loading,
   } = useData();
@@ -27,6 +28,7 @@ export default function ClientPage() {
 
       <ResultTable
         data={data}
+        setData={setData}
         page={page}
         setPage={setPage}
         totalPages={totalPages}

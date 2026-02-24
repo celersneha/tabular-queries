@@ -38,10 +38,11 @@ export function useData() {
           limit: LIMIT,
         });
 
+        console.log("📊 Fetched users:", res.users.length);
         setData(res.users as User[]);
         setTotalPages(res.totalPages);
       } catch (error) {
-        console.error(error);
+        console.error("❌ Error fetching users:", error);
       } finally {
         setLoading(false);
       }
@@ -58,6 +59,7 @@ export function useData() {
     page,
     setPage,
     data,
+    setData,
     totalPages,
     loading,
   };
